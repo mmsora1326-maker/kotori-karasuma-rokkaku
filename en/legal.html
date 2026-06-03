@@ -138,6 +138,19 @@
         <p>© 2026 KOTORI KARASUMA ROKKAKU</p>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.getElementById("hamburger");
+            const nav = document.getElementById("navMenu");
+
+            if (hamburger && nav) {
+                hamburger.addEventListener("click", () => {
+                    nav.classList.toggle("active");
+                });
+            }
+        });
+    </script>
+
 </body>
 
 </html>
