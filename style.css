@@ -1,0 +1,703 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Serif JP', serif;
+    background: #faf8f3;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* ヘッダー */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+    transition: transform 0.3s ease;
+}
+
+/* 隠すときだけ使う */
+header.hide {
+    transform: translateY(-100%);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #6f4e37;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #a67c52;
+}
+
+/* ヒーロー */
+
+.hero {
+    height: 100vh;
+    background: url("https://cdn.phototourl.com/free/2026-06-01-9246357a-6ad7-449f-96bb-bd77bd4fa47f.jpg") center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .35);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* ボタン */
+
+.btn {
+    display: inline-block;
+    background: #a67c52;
+    color: white;
+    text-decoration: none;
+    padding: 14px 35px;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #7b5a3d;
+    transform: translateY(-2px);
+}
+
+/* 共通 */
+
+section {
+    padding: 100px 10%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    color: #6f4e37;
+}
+
+/* About */
+
+#about p {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+
+/* 体験紹介 */
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+.experience-item img {
+    width: 50%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+}
+
+.experience-text {
+    flex: 1;
+}
+
+.experience-text h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #6f4e37;
+}
+
+.experience-text p {
+    font-size: 1.05rem;
+}
+
+.experience-image {
+    display: block;
+    width: 50%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.experience-image img {
+    width: 100%;
+    transition: .4s;
+}
+
+.experience-image:hover img {
+    transform: scale(1.05);
+}
+
+.experience-text h3 a {
+    text-decoration: none;
+    color: #6f4e37;
+}
+
+/* 左右交互 */
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* スマホ */
+
+@media(max-width:768px) {
+
+    .experience-item,
+    .reverse {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .experience-item img {
+        width: 100%;
+        height: 300px;
+    }
+
+}
+
+
+/* カード */
+
+.card h3 {
+    color: #6f4e37;
+    margin-bottom: 15px;
+}
+
+/* アクセス */
+
+#access {
+    text-align: center;
+}
+
+/* 予約 */
+
+#reserve {
+    text-align: center;
+    background: #f2ece3;
+}
+
+/* SNS */
+
+#sns {
+    text-align: center;
+}
+
+.sns-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.sns-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    position: relative;
+}
+
+.sns-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* 吹き出し */
+.sns-icon::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.15s ease;
+    white-space: nowrap;
+}
+
+/* ホバーした瞬間表示 */
+.sns-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* hover */
+.sns-icon:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* 色分け */
+.sns-icon.instagram {
+    background: #fff0f5;
+}
+
+.sns-icon.x {
+    background: #f0f0f0;
+}
+
+.sns-icon.facebook {
+    background: #e8f0ff;
+}
+
+.sns-icon.line {
+    background: #e6fff0;
+}
+
+.sns-icon.tumblr {
+    background: #eef3f8;
+}
+
+.sns-icon.hatena {
+    background: #e6f7ff;
+}
+
+.sns-links a {
+    text-decoration: none;
+    color: white;
+    background: #6f4e37;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: .3s;
+}
+
+.sns-links a:hover {
+    background: #8a6447;
+}
+
+.sns-icon::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+/* フッター */
+
+footer {
+    background: #2d2d2d;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* スマホ */
+
+@media(max-width:768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 70px 8%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-detail {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 80px;
+    }
+
+    .reverse {
+        flex-direction: column;
+    }
+
+    .activity-image {
+        width: 100%;
+        height: 450px;
+    }
+
+}
+
+
+
+
+.lead {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+ul {
+    max-width: 800px;
+    margin: auto;
+    padding-left: 25px;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+.detail-hero {
+    position: relative;
+    width: 100%;
+    height: 55vh;
+    min-height: 350px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.detail-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+/* タイトル */
+
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 90%;
+    z-index: 2;
+}
+
+.hero-title h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    letter-spacing: .35em;
+}
+
+.hero-title p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, .8);
+}
+
+
+.intro {
+    background: white;
+    padding: 80px 10%;
+}
+
+.lead {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2.2;
+}
+
+.experience-detail {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    max-width: 1200px;
+    margin: 0 auto 120px;
+    margin-bottom: 100px;
+}
+
+
+.experience-detail>div {
+    flex: 1;
+}
+
+.experience-detail img {
+    width: 45%;
+    max-width: 500px;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.experience-detail h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #6f4e37;
+}
+
+.experience-detail p {
+    line-height: 2;
+}
+
+.experience-detail.reverse {
+    flex-direction: row-reverse;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    text-align: center;
+}
+
+.other-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.card a:hover .other-image {
+    transform: scale(1.05);
+}
+
+.image-link {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.price-box {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    background: white;
+    padding: 50px;
+    border-radius: 12px;
+    margin-bottom: 80px;
+
+}
+
+.price-box h3 {
+    color: #6f4e37;
+    margin-bottom: 25px;
+}
+
+.price-box p {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.price-box strong {
+    color: #b22222;
+    font-size: 1.2rem;
+}
+
+.price-box del {
+    color: #888;
+}
+
+#legal {
+    background: #fff;
+    text-align: center;
+}
+
+.legal-box {
+    max-width: 800px;
+    margin: auto;
+    background: #faf8f3;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: left;
+    line-height: 1.9;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.legal-box h3 {
+    margin-top: 25px;
+    margin-bottom: 8px;
+    color: #6f4e37;
+    font-size: 1.1rem;
+}
+
+.legal-box p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.legal-box a {
+    color: #a67c52;
+    text-decoration: none;
+}
+
+.legal-box a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.map-box {
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+}
+
+.language-switch {
+    display: flex;
+    gap: 8px;
+}
+
+.language-switch a {
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid #6f4e37;
+    border-radius: 20px;
+    color: #6f4e37;
+    font-size: 0.85rem;
+}
+
+.language-switch a:hover {
+    background: #6f4e37;
+    color: white;
+}
+
+/* ハンバーガー */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 2px;
+    background: #6f4e37;
+    transition: 0.3s;
+}
+
+/* スマホ時 */
+@media (max-width: 768px) {
+
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+
+        /* 最初は隠す */
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}

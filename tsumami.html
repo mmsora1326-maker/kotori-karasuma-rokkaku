@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>つまみ細工体験 | 古都里 烏丸六角</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        let lastScroll = 0;
+        const header = document.querySelector("header");
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                header.classList.add("hide");
+            } else {
+                header.classList.remove("hide");
+            }
+
+            lastScroll = currentScroll;
+        });
+
+    });
+</script>
+
+<body>
+
+    <header>
+        <div class="logo">古都里 烏丸六角</div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="navMenu">
+            <a href="index.html">ホーム</a>
+            <a href="#contents">体験内容</a>
+            <a href="#price">料金</a>
+            <a href="#reserve">予約</a>
+            <a href="#others">他の体験を見る</a>
+        </nav>
+
+        <div class="language-switch">
+            <a href="tsumami.html">English</a>
+        </div>
+
+    </header>
+
+    <section class="detail-hero">
+
+        <img src="https://cdn.phototourl.com/free/2026-06-02-5eed42b4-c253-4f01-ba6d-2f5f3d75cf00.jpg" alt="つまみ細工体験">
+
+        <div class="hero-title">
+            <h1>つまみ細工体験</h1>
+        </div>
+
+    </section>
+
+    <section class="intro">
+
+        <p class="lead">
+
+            江戸時代から受け継がれてきた日本の伝統工芸
+            「つまみ細工」を体験していただけます。
+
+            小さな布を一枚ずつ折り重ね、
+            花や季節のモチーフを作りながら、
+            日本の繊細な手仕事の美しさに触れていただけます。
+
+            完成した作品はそのままお持ち帰りいただけます。
+
+        </p>
+
+    </section>
+
+    <section id="contents">
+
+        <h2>体験の流れ</h2>
+
+        <div class="experience-detail">
+
+            <img src="https://cdn.phototourl.com/free/2026-06-02-4b768d27-1d77-4a05-96b0-03ba8fd827ba.png" alt="つまみ細工"
+                class="activity-image">
+
+            <div>
+
+                <h3>つまみ細工制作</h3>
+
+                <p>
+                    専用の布を使用し、
+                    つまみ細工の基本技法から丁寧に学んでいただきます。
+
+                    初めての方でも安心してご参加いただけるよう、
+                    スタッフが一つひとつサポートいたします。
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="experience-detail reverse">
+
+            <img src="https://cdn.phototourl.com/free/2026-06-02-ed939d7e-e16d-4ac5-a031-8bf820997bc6.png" alt="完成作品"
+                class="activity-image">
+
+            <div>
+
+                <h3>完成作品のお持ち帰り</h3>
+
+                <p>
+                    制作した作品は、
+                    髪飾りやアクセサリーとしてお使いいただけます。
+
+                    京都旅行の思い出として、
+                    世界に一つだけの作品をお持ち帰りください。
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>こんな方におすすめ</h2>
+
+        <ul>
+            <li>日本の伝統工芸に興味がある方</li>
+            <li>京都らしい文化体験をしたい方</li>
+            <li>ものづくりが好きな方</li>
+            <li>旅の思い出を形に残したい方</li>
+        </ul>
+
+    </section>
+
+    <section id="price">
+
+        <h2>料金・開催情報</h2>
+
+        <div class="price-box">
+
+            <h3>つまみ細工体験</h3>
+
+            <p>
+                お一人様：13,000円
+            </p>
+
+            <p>
+                所要時間：約90分
+            </p>
+
+            <p>
+                グループサイズ：1〜8名
+            </p>
+
+            <p>
+                開催時間<br>
+                月・火・木<br>
+                15:30〜
+            </p>
+
+        </div>
+
+
+    </section>
+
+    <section id="reserve">
+
+
+        <h2>ご予約</h2>
+
+        <p>
+            完全予約制となっております。
+        </p>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSegrJzVl5YOpyGWKYilCFujVvyebkA8AV7BqmxG8glSJdZHFg/viewform"
+            class="btn">
+            Googleフォームから予約する
+        </a>
+
+
+    </section>
+
+    <section id="others">
+
+        <h2>他の体験を見る</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <a href="culture.html" class="image-link">
+                    <img src="https://cdn.phototourl.com/free/2026-06-02-5eed42b4-c253-4f01-ba6d-2f5f3d75cf00.jpg"
+                        class="other-image">
+                </a>
+
+                <h3>日本文化体験</h3>
+
+                <p>
+                    日本の伝統文化を体験。
+                </p>
+
+                <a href="culture.html" class="btn">
+                    詳細を見る
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <a href="yukata.html" class="image-link">
+                    <img src="https://cdn.phototourl.com/free/2026-06-02-cc0d15d3-71b4-4e53-ba9d-3d4e03277e11.jpg"
+                        class="other-image">
+                </a>
+
+                <h3>浴衣ショッピング</h3>
+
+                <p>
+                    浴衣選びと着付けレッスン。
+                </p>
+
+                <a href="yukata.html" class="btn">
+                    詳細を見る
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="sns">
+
+        <h2>SNSでシェア</h2>
+
+        <div class="sns-links">
+
+            <a href="https://www.instagram.com" class="sns-icon instagram" data-name="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            </a>
+
+            <a href="https://twitter.com" class="sns-icon x" data-name="X">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="X">
+            </a>
+
+            <a href="https://www.facebook.com" class="sns-icon facebook" data-name="Facebook">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+            </a>
+
+            <a href="https://www.line.me" class="sns-icon line" data-name="LINE">
+                <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="LINE">
+            </a>
+
+            <a href="https://www.tumblr.com" class="sns-icon tumblr" data-name="Tumblr">
+                <img src="https://cdn-icons-png.flaticon.com/512/3536/3536616.png" alt="Tumblr">
+            </a>
+
+            <a href="https://b.hatena.ne.jp" class="sns-icon hatena" data-name="Hatena Bookmark">
+                <img src="https://cdn-icons-png.flaticon.com/512/4494/4494490.png" alt="Hatena Bookmark">
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 古都里 烏丸六角</p>
+    </footer>
+
+</body>
+
+</html>

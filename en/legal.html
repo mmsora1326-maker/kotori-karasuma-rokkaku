@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclosure based on the Specified Commercial Transactions Act | KOTORI KARASUMA ROKKAKU</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        let lastScroll = 0;
+        const header = document.querySelector("header");
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                header.classList.add("hide");
+            } else {
+                header.classList.remove("hide");
+            }
+
+            lastScroll = currentScroll;
+        });
+
+    });
+</script>
+
+<body>
+
+    <header>
+        <div class="logo">KOTORI KARASUMA ROKKAKU</div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+        </nav>
+
+        <div class="language-switch">
+            <a href="../legal.html">Japanese</a>
+        </div>
+
+    </header>
+
+
+
+    <section id="legal">
+
+        <h2>Disclosure based on the Specified Commercial Transactions Act</h2>
+
+        <div class="legal-box">
+
+            <h3>Business name</h3>
+            <p>KOTORI LLC</p>
+
+            <h3>Business manager</h3>
+            <p>Sato Tomoko</p>
+
+            <h3>Head office location</h3>
+            <p>〒616-8065 京都市右京区太秦安井西裏町</p>
+
+            <h3>contact address</h3>
+            <p>Email：kotori.kyoto.jp@gmail.com</p>
+
+            <h3>LINE official</h3>
+            <p><a href="https://lin.ee/uEFUO80" target="_blank">Click here for the official LINE account.</a></p>
+
+            <h3>Business hours and closing days</h3>
+            <p>Support hours: 10:00 AM - 5:00 PM (Email inquiries accepted 24 hours a day)</p>
+            <p>The store is open by reservation only.</p>
+
+            <h3>Sales price</h3>
+            <p>Listed on each experience page</p>
+
+            <h3>Other necessary charges besides the product price</h3>
+            <p>Bank transfer fees, internet connection fees, etc., will be borne by the customer.</p>
+
+            <h3>Payment method</h3>
+            <p>Credit card payment or bank transfer</p>
+
+            <h3>Payment timing</h3>
+            <p>Payment is required in advance. Please make your payment within 3 days of applying.</p>
+
+            <h3>Timing of service provision</h3>
+            <p>We will provide the in-person experience service in Kyoto at the date and time you have booked.</p>
+
+            <h3>Cancellation policy</h3>
+            <p>
+                [About cancellation]<br>
+                Please be aware that cancellation fees will apply in accordance with our cancellation policy.
+            </p>
+
+            <p>
+                If you need to cancel your service after applying, please be sure to contact us in advance at
+                kotori.kyoto.jp@gmail.com.<br>
+                Cancellations are free up to 3 days in advance, 50% of the fee applies 2 days in advance, and 100% on
+                the day of the reservation.
+            </p>
+
+            <p>
+                If the name on the bank transfer differs from the name on your application, we will not be able to
+                confirm your payment, so please be sure to provide the name on the transfer.
+            </p>
+
+            <h3>Receipt</h3>
+            <p>We will replace it with a payment statement issued by each financial institution.<br>
+                A lord's certificate will be issued upon request at the time of payment.<br>
+                If you have any specific requests regarding the recipient's name or the purpose of the message, please
+                let us know in advance.
+            </p>
+
+            <h3>Returns and refunds</h3>
+            <p>Due to the nature of the service, we do not accept returns or refunds after the service has been
+                provided.<br>
+                If the sales page offers a money-back guarantee or similar offer, I will prioritize that option.
+            </p>
+
+            <h3>Others</h3>
+            <p>
+                Any matters not mentioned above will be provided without delay upon request during the transaction.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <footer>
+        <p>© 2026 KOTORI KARASUMA ROKKAKU</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>古都里 烏丸六角 | 京都文化体験</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.phototourl.com/free/2026-06-01-9246357a-6ad7-449f-96bb-bd77bd4fa47f.jpg" rel="stylesheet">
+</head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        let lastScroll = 0;
+        const header = document.querySelector("header");
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                header.classList.add("hide");
+            } else {
+                header.classList.remove("hide");
+            }
+
+            lastScroll = currentScroll;
+        });
+
+    });
+</script>
+
+<body>
+
+    <header>
+        <div class="logo">古都里 烏丸六角</div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="navMenu">
+            <a href="#about">古都里</a>
+            <a href="culture.html">日本文化体験</a>
+            <a href="tsumami.html">つまみ細工</a>
+            <a href="yukata.html">浴衣ショッピング</a>
+            <a href="#access">アクセス</a>
+            <a href="#reserve">予約</a>
+            <a href="#contact">お問い合わせ</a>
+        </nav>
+
+        <div class="language-switch">
+            <a href="en/index.html">English</a>
+        </div>
+    </header>
+
+    <section class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1>古都里 烏丸六角</h1>
+
+            <p>
+                京都の中心で、日本文化の美しさに触れる特別な時間
+            </p>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSegrJzVl5YOpyGWKYilCFujVvyebkA8AV7BqmxG8glSJdZHFg/viewform"
+                class="btn">
+                体験を予約する
+            </a>
+        </div>
+
+    </section>
+
+    <section id="about">
+
+        <h2>古都里について</h2>
+
+        <p>
+            京都・烏丸六角にある文化体験サロンです。
+            書道、茶道、着物、花嫁着物撮影、
+            つまみ細工、浴衣ショッピングとセルフ着付けレッスンなど、
+            日本の伝統文化を気軽に体験していただけます。
+        </p>
+
+    </section>
+
+
+    <section id="experience">
+
+        <h2>体験内容</h2>
+
+        <div class="experience-item">
+
+            <a href="culture.html" class="experience-image">
+
+                <img src="https://cdn.phototourl.com/free/2026-06-02-25219ef4-29f6-485a-99d3-eb11b3a672d5.jpg"
+                    alt="日本文化体験">
+
+            </a>
+
+            <div class="experience-text">
+
+                <h3>
+                    <a href="culture.html">
+                        日本文化体験
+                    </a>
+                </h3>
+
+                <p>
+                    書道・茶道・着物・花嫁着物撮影を
+                    一度に楽しめる特別な文化体験です。
+                </p>
+
+                <a href="culture.html" class="btn">
+                    詳細を見る
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="experience-item reverse">
+
+            <a href="tsumami.html" class="experience-image">
+
+                <img src="https://cdn.phototourl.com/free/2026-06-02-5eed42b4-c253-4f01-ba6d-2f5f3d75cf00.jpg"
+                    alt="つまみ細工">
+
+            </a>
+
+            <div class="experience-text">
+
+                <h3>
+                    <a href="tsumami.html">
+                        つまみ細工ワークショップ
+                    </a>
+                </h3>
+
+                <p>
+                    日本の伝統工芸「つまみ細工」を体験。
+                    初心者の方でも楽しく制作でき、
+                    完成した作品はお持ち帰りいただけます。
+                </p>
+
+                <a href="tsumami.html" class="btn">
+                    詳細を見る
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="experience-item">
+
+            <a href="yukata.html" class="experience-image">
+
+                <img src="https://cdn.phototourl.com/free/2026-06-02-cc0d15d3-71b4-4e53-ba9d-3d4e03277e11.jpg"
+                    alt="浴衣ショッピング">
+
+            </a>
+
+            <div class="experience-text">
+
+                <h3>
+                    <a href="yukata.html">
+                        浴衣ショッピング＆セルフ着付け
+                    </a>
+                </h3>
+
+                <p>
+                    お気に入りの浴衣を選びながら、
+                    自分で着られるようになる着付けレッスン。
+                    京都旅行後も楽しめる人気体験です。
+                </p>
+
+                <a href="yukata.html" class="btn">
+                    詳細を見る
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="access">
+
+        <h2>アクセス</h2>
+
+        <p>
+            〒604-8164<br>
+            京都市中京区烏丸六角西入ル骨屋町150-2 2階
+        </p>
+
+        <div class="map-box">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.973459282535!2d135.75422709678958!3d35.0073695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600109ae3b5c9f35%3A0x4bd6505657658d68!2z5Y-k6YO96YeMIOeDj-S4uOWFreinkiBLT1RPUkkgS0FSQVNVTUFST0tLQUtV!5e0!3m2!1sja!2sjp!4v1780396381979!5m2!1sja!2sjp"
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+    </section>
+
+    <section id="reserve">
+
+        <h2>ご予約</h2>
+
+        <p>
+            体験は完全予約制となっております。
+        </p>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSegrJzVl5YOpyGWKYilCFujVvyebkA8AV7BqmxG8glSJdZHFg/viewform"
+            class="btn">
+            Googleフォームから予約
+        </a>
+
+    </section>
+
+    <section id="contact">
+
+        <h2>お問い合わせ</h2>
+
+        <div class="contact-form">
+
+            <script src="https://js-na2.hsforms.net/forms/embed/246371624.js" defer></script>
+            <div class="hs-form-frame" data-region="na2" data-form-id="8c206789-f832-40ec-bb3e-9cb433671af4"
+                data-portal-id="246371624"></div>
+
+        </div>
+
+        <div id="hubspot-form"></div>
+
+    </section>
+
+
+
+    <section id="sns">
+
+        <h2>SNSでシェア</h2>
+
+        <div class="sns-links">
+
+            <a href="https://www.instagram.com" class="sns-icon instagram" data-name="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            </a>
+
+            <a href="https://twitter.com" class="sns-icon x" data-name="X">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="X">
+            </a>
+
+            <a href="https://www.facebook.com" class="sns-icon facebook" data-name="Facebook">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+            </a>
+
+            <a href="https://www.line.me" class="sns-icon line" data-name="LINE">
+                <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="LINE">
+            </a>
+
+            <a href="https://www.tumblr.com" class="sns-icon tumblr" data-name="Tumblr">
+                <img src="https://cdn-icons-png.flaticon.com/512/3536/3536616.png" alt="Tumblr">
+            </a>
+
+            <a href="https://b.hatena.ne.jp" class="sns-icon hatena" data-name="Hatena Bookmark">
+                <img src="https://cdn-icons-png.flaticon.com/512/4494/4494490.png" alt="Hatena Bookmark">
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>© 2026 古都里 烏丸六角</p>
+
+        <p>
+            <a href="legal.html">
+                特定商取引法に基づく表記
+            </a>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

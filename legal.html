@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特定商取引法に基づく表記 | 古都里 烏丸六角</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        let lastScroll = 0;
+        const header = document.querySelector("header");
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                header.classList.add("hide");
+            } else {
+                header.classList.remove("hide");
+            }
+
+            lastScroll = currentScroll;
+        });
+
+    });
+</script>
+
+<body>
+
+    <header>
+        <div class="logo">古都里 烏丸六角</div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="navMenu">
+            <a href="index.html">ホームへ戻る</a>
+        </nav>
+
+        <div class="language-switch">
+            <a href="en/legal.html">English</a>
+        </div>
+
+    </header>
+
+
+
+    <section id="legal">
+
+        <h2>特定商取引法に基づく表記</h2>
+
+        <div class="legal-box">
+
+            <h3>事業者名</h3>
+            <p>合同会社古都里</p>
+
+            <h3>事業者責任者</h3>
+            <p>佐藤 智子</p>
+
+            <h3>本社所在地</h3>
+            <p>〒616-8065 京都市右京区太秦安井西裏町</p>
+
+            <h3>連絡先</h3>
+            <p>Email：kotori.kyoto.jp@gmail.com</p>
+
+            <h3>LINE公式</h3>
+            <p><a href="https://lin.ee/uEFUO80" target="_blank">LINE公式アカウントはこちら</a></p>
+
+            <h3>営業時間・休業日</h3>
+            <p>サポート対応時間：10:00〜17:00（メールは24時間受付）</p>
+            <p>店舗は予約時のみの営業となります。</p>
+
+            <h3>販売価格</h3>
+            <p>各体験ページに記載</p>
+
+            <h3>商品代金以外の必要料金</h3>
+            <p>銀行振込手数料、インターネット接続費用等はお客様のご負担となります。</p>
+
+            <h3>代金の支払い方法</h3>
+            <p>クレジットカード決済または銀行振込</p>
+
+            <h3>代金の支払時期</h3>
+            <p>前払いとなります。お申し込み後、3日以内にお支払いください。</p>
+
+            <h3>役務の提供時期</h3>
+            <p>ご予約いただいた日時に、京都にて対面で体験サービスを提供いたします。</p>
+
+            <h3>キャンセルポリシー</h3>
+            <p>
+                【キャンセルについて】<br>
+                キャンセルポリシーに基づき、キャンセル料が発生いたしますことをご了承ください。
+            </p>
+
+            <p>
+                サービスのお申し込み後、お客様のご都合によりキャンセルをされる際は、必ず事前に<br>
+                kotori.kyoto.jp@gmail.com までご連絡ください。<br>
+                3日前まで無料、2日前は50%、当日は100%のキャンセル料が発生します。
+            </p>
+
+            <p>
+                振込名が、お申込み名と異なる場合、入金確認がとれませんので、振込名を必ずご連絡ください。
+            </p>
+
+            <h3>領収書</h3>
+            <p>各金融機関が発光するお支払明細にて替えさせていただきます。<br>
+                お支払い時にご希望があれば領主所を発行いたします。<br>
+                宛名・但し書きのご指定がある場合は、事前にお知らせください。
+            </p>
+
+            <h3>返品・返金について</h3>
+            <p>サービスの性質上、提供後の返品・返金はお受けしておりません。<br>
+                販売ページに返金保証等が付く場合はそちらをゆうせんします。
+            </p>
+
+            <h3>その他</h3>
+            <p>
+                上記以外の事項に関しましては、お取引の際に請求があれば遅延なく提示いたします。
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <footer>
+        <p>© 2026 古都里 烏丸六角</p>
+    </footer>
+
+</body>
+
+</html>
