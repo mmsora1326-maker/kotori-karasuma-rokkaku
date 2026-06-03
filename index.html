@@ -297,6 +297,7 @@
 
             if (hamburger && nav) {
                 hamburger.addEventListener("click", () => {
+                    hamburger.classList.toggle("active"); // ←これ追加
                     nav.classList.toggle("active");
                 });
             }
