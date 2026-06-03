@@ -44,8 +44,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (hamburger && nav) {
         hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
             nav.classList.toggle("active");
         });
     }
+    document.querySelectorAll("#navMenu a").forEach(link => {
+        link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            nav.classList.remove("active");
+        });
+    });
 
 });
