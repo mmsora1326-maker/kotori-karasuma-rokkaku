@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // カードホバー
+    // カードホバー（これはそのままでOK）
     const cards = document.querySelectorAll(".card");
 
     cards.forEach(card => {
@@ -9,50 +9,57 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // ヘッダースクロール制御
-
-
+    // ヘッダー制御
     let lastScroll = 0;
     const header = document.querySelector("header");
-
-    // ここがポイント：誤動作防止の余裕
     const threshold = 10;
 
     window.addEventListener("scroll", () => {
         const currentScroll = window.pageYOffset;
-
         const diff = currentScroll - lastScroll;
 
-        // ちょっと動いただけなら無視
         if (Math.abs(diff) < threshold) return;
 
-        // 下スクロール → 隠す
         if (diff > 0 && currentScroll > 100) {
             header.classList.add("hide");
-        }
-
-        // 上スクロール → 出す
-        else if (diff < 0) {
+        } else {
             header.classList.remove("hide");
         }
 
         lastScroll = currentScroll;
     });
 
+    // ハンバーガー
     const hamburger = document.getElementById("hamburger");
     const nav = document.getElementById("navMenu");
+    const overlay = document.getElementById("menuOverlay");
 
-    if (hamburger && nav) {
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            nav.classList.toggle("active");
-        });
+    const OPEN = "active";
+
+    function openMenu() {
+        hamburger.classList.add(OPEN);
+        nav.classList.add(OPEN);
+        overlay.classList.add(OPEN);
     }
-    document.querySelectorAll("#navMenu a").forEach(link => {
-        link.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            nav.classList.remove("active");
-        });
-    });
 
+    function closeMenu() {
+        hamburger.classList.remove(OPEN);
+        nav.classList.remove(OPEN);
+        overlay.classList.remove(OPEN);
+    }
+
+    function toggleMenu() {
+        hamburger.classList.contains(OPEN)
+            ? closeMenu()
+            : openMenu();
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+
+    overlay.addEventListener("click", closeMenu);
+
+    // メニュー押したら閉じる（超重要）
+    document.querySelectorAll("#navMenu a").forEach(a => {
+        a.addEventListener("click", closeMenu);
+    });
 });

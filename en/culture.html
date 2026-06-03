@@ -10,30 +10,14 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-
-        let lastScroll = 0;
-        const header = document.querySelector("header");
-
-        window.addEventListener("scroll", () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                header.classList.add("hide");
-            } else {
-                header.classList.remove("hide");
-            }
-
-            lastScroll = currentScroll;
-        });
-
-    });
-</script>
-
 <body>
 
     <header>
+
+        <div class="language-switch">
+            <a href="../culture.html">Japanese</a>
+        </div>
+
         <div class="logo">KOTORI KARASUMA ROKKAKU</div>
 
         <div class="hamburger" id="hamburger">
@@ -50,11 +34,9 @@
             <a href="#others">Other experiences</a>
         </nav>
 
-        <div class="language-switch">
-            <a href="../culture.html">Japanese</a>
-        </div>
-
     </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
 
     <section class="detail-hero">
 
@@ -347,11 +329,34 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+
+            let lastScroll = 0;
+            const header = document.querySelector("header");
+
+            window.addEventListener("scroll", () => {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    header.classList.add("hide");
+                } else {
+                    header.classList.remove("hide");
+                }
+
+                lastScroll = currentScroll;
+            });
+
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
             const hamburger = document.getElementById("hamburger");
             const nav = document.getElementById("navMenu");
 
             if (hamburger && nav) {
                 hamburger.addEventListener("click", () => {
+                    hamburger.classList.toggle("active"); // ←これ追加
                     nav.classList.toggle("active");
                 });
             }
