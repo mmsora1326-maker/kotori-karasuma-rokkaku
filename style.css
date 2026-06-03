@@ -666,6 +666,7 @@ ul li {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    z-index: 2000;
 }
 
 .hamburger span {
@@ -673,6 +674,8 @@ ul li {
     height: 2px;
     background: #6f4e37;
     transition: 0.3s;
+    display: block;
+    transform-origin: center;
 }
 
 /* スマホ時 */
