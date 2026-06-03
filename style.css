@@ -662,7 +662,12 @@ ul li {
 
 /* ハンバーガー */
 .hamburger {
-    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .hamburger span {
@@ -670,9 +675,7 @@ ul li {
     width: 28px;
     height: 2px;
     background: #6f4e37;
-    margin: 5px 0;
     transition: all 0.3s ease;
-    transform-origin: center;
 }
 
 /* ×に変形 */
